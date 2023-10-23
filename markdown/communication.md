@@ -33,20 +33,20 @@ Discord hat in einer Stellungnahme bekannt gegeben, keine Daten an dritte weiter
 ### Teams:
 
 - **Benutzerfreundlichkeit:**
-
+Teams bietet ein übersichtliches Design. Die wichtigsten Funktionen sind links in der Taskbar aufgelistet. Anrufe und Videochats stehen im Mittelpunkt.
 - **Verfügbarkeit:**
-
+Teams ist auf verschiedenen Plattformen verfügbar. Darunter zählen Android, iOS, Windows, macOS und Linux. Außerdem kann es im Browser genutzt werden, ohne die Applikation herunterladen zu müssen.
 - **Funktionen:**
-
+Mit einer breiten Palette von Funktionen, darunter Chats, Anrufe, Besprechungen, Videokonferenzen, Bildschirmfreigabe und Kalenderintegration, ermöglicht Teams ein reibungsloses Arbeiten und Abstimmen im Team.
 - **Integration:**
-
+Darüber hinaus bietet Teams Zugriff auf eine Vielzahl anderer Microsoft 365-Dienste, darunter beispielsweise Microsoft Planner für das effiziente   Aufgabenmanagement, um die Produktivität zu steigern.
 - **Sicherheit:**
+Für die Sicherheit wird die Netzwerkkommunikation standardmäßig verschlüsselt. Zusätzlich werden Server aufgefordert, Zertifikate zu verwenden, um die Daten von Teams im Netzwerk zu schützen. Für noch höhere Sicherheitsanforderungen bietet Teams die Möglichkeit zur Aktivierung einer End-to-End-Verschlüsselung, die die Sicherheit von Audio-, Video- und Bildschirmfreigabe gewährleistet. Selbst ohne End-to-End-Verschlüsselung sind die Daten in Teams weiterhin verschlüsselt, um die Vertraulichkeit zu wahren.
 
+<br>
 
-
-
-|           | Benutzerfreundlichkeit | Verfügbarkeit | Funktionen | Integration | Sicherheit | _Gesamt_ |
+| Tool | Benutzerfreundlichkeit | Verfügbarkeit | Funktionen | Integration | Sicherheit | _Gesamt_ |
 |-----------|-----------|-----------|-----------|-----------|-----------|-----------|
-| **Discord** | 0 | 0 | 0 |
-| **Teams** | 0 | 0 | 0 |
-| **TeamSpeak** | 0 | 0 | 0 |
+| **Discord** | 8 | 10 | 9 | 10 | 7 | 8,8 |
+| **Teams** | 6 | 10 | 7 | 8 | 8 | 7,8 |
+| **TeamSpeak** | 2 | 8 | 5 | 6 | 8 | 5,8 |
