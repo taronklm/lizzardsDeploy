@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Configuration;
 public class StudentConfig {
 
     @Bean
-    CommandLineRunner commandLineRunner(StudentRepository repository) {
+    CommandLineRunner StudentCommandLineRunner(StudentRepository repository) {
         return args -> {
             Student mariam = new Student(
                     "Mariam",
