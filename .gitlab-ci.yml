@@ -13,4 +13,6 @@ cache:
 
 maven-build-stage:
     stage: build
-    script: mvn clean install
+    script: 
+        - cd backend
+        - mvn clean install
