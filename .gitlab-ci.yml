@@ -1,0 +1,18 @@
+image: maven:3-jdk-8
+
+stages:
+    - build
+    
+variables:
+  MAVEN_OPTS: "-Dmaven.repo.local=.m2/repository"
+  
+cache:
+  paths:
+    - .m2/repository/
+    - target/
+
+maven-build-process:
+    stage: build
+    script:
+        - cd /backend
+        - mvn clean install
