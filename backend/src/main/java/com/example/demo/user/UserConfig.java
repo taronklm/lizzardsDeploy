@@ -1,24 +1,24 @@
-package com.example.demo.student;
-
-import java.time.LocalDate;
-import java.time.Month;
-import java.util.List;
+package com.example.demo.user;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import java.time.LocalDate;
+import java.time.Month;
+import java.util.List;
+
 @Configuration
-public class StudentConfig {
+public class UserConfig {
 
     @Bean
-    CommandLineRunner StudentCommandLineRunner(StudentRepository repository) {
+    CommandLineRunner UserCommandLineRunner(UserRepository repository) {
         return args -> {
-            Student mariam = new Student(
+            User mariam = new User(
                     "Mariam",
                     "mariam@bht.de",
                     LocalDate.of(2000, Month.JANUARY, 5));
-            Student alex = new Student(
+            User alex = new User(
                     "Alex",
                     "alex@bht.de",
                     LocalDate.of(1999, Month.FEBRUARY, 13));

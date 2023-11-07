@@ -1,5 +1,4 @@
 package com.example.demo.student;
-
 import java.time.LocalDate;
 import java.time.Period;
 
@@ -12,7 +11,7 @@ import jakarta.persistence.Table;
 import jakarta.persistence.Transient;
 
 @Entity
-@Table
+@Table(name = "\"student\"")
 public class Student {
 
     @Id
