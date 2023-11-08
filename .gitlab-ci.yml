@@ -76,7 +76,7 @@ deploy:jdk8:
       fi
     - 'cd backend'
     - 'mvn -v'
-    - 'mvn $MAVEN_CLI_OPTS deploy'
+    - 'mvn clean install'
   only:
     variables:
       - $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
