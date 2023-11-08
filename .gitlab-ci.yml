@@ -76,6 +76,7 @@ deploy:jdk8:
       fi
     - 'cd backend'
     - 'mvn -v'
+    - 'java --version'
     - 'mvn $MAVEN_CLI_OPTS deploy'
   only:
     variables:
