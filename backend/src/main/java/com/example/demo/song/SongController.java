@@ -35,6 +35,16 @@ public class SongController {
         return songService.getSongs();
     }
 
+    @GetMapping(path = "{songId}")
+    public Song getSong(@PathVariable("songId") Long songId){
+        return songService.getSong(songId);
+    }
+
+    @GetMapping(path = "{userId}/songs")
+    public List<Song> getSongsByUser(@PathVariable("userId") Long userId){
+        return songService.getSongsByUser(userId);
+    }
+
     @PostMapping(path = "create/{userId}")
     public void createNewSong(@RequestBody Song song, @PathVariable("userId") Long userId){
         User user = userService.getUserById(userId);

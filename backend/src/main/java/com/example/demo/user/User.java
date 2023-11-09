@@ -2,6 +2,7 @@ package com.example.demo.user;
 import java.time.LocalDate;
 import java.util.List;
 
+import com.example.demo.comment.Comment;
 import com.example.demo.song.Song;
 
 import jakarta.persistence.Entity;
@@ -27,6 +28,9 @@ public class User {
 
     @OneToMany(mappedBy = "user") //relation many songs, one user
     private List<Song> songs;
+
+    @OneToMany(mappedBy = "creator")
+    private List<Comment> comments;
 
     @Transient
     private Integer age;

@@ -1,0 +1,19 @@
+### SET
+POST http://localhost:8080/api/v1/song/create/1 HTTP/1.1
+Content-Type: application/json
+
+{
+    "title": "Peng",
+    "actor": "Mama",
+    "songDuration": 312,
+    "likes": 0,
+    "genre": "test"
+}
+
+### SET
+POST http://localhost:8080/api/v1/comment/create/2/2 HTTP/1.1
+Content-Type: application/json
+
+{
+    "text": "Comment test test"
+}

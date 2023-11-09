@@ -23,14 +23,31 @@ public class SongService {
         this.songRepository = songRepository;
     }
 
+    //get all songs
     public List<Song> getSongs(){
         return songRepository.findAll();
     }
 
+    //get song by id
+    public Song getSong(Long songId){
+        return songRepository.findById(songId).orElseThrow(() -> new IllegalStateException(
+            "song with id " + songId + " does not exists"
+        ));
+    }
+
+    //get songs by user
+    public List<Song> getSongsByUser(Long userId) {
+        return songRepository.findByUser(userId).orElseThrow(() -> new IllegalStateException(
+            "songs with userId " + userId + " does not exists"
+        ));
+    }
+    
+    //create new song
     public void createNewSong(Song song) {
         songRepository.save(song);
     }
 
+    //delete song
     public void deleteSong(Long songId) {
         Boolean exists = songRepository.existsById(songId);
         if (!exists) {

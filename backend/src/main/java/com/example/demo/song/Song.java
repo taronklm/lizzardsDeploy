@@ -2,6 +2,7 @@ package com.example.demo.song;
 
 import java.util.List;
 
+import com.example.demo.comment.Comment;
 // import com.example.demo.comment.Comment;
 import com.example.demo.user.User;
 
@@ -11,6 +12,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
 
@@ -26,7 +28,9 @@ public class Song {
     private String actor;
     private Integer songDuration;
     private Integer likes;
-    // private List<Comment> comments;
+    
+    @OneToMany(mappedBy = "song")
+    private List<Comment> comments;
     
     @ManyToOne // relation one user, many songs
     @JoinColumn(name = "userId")
