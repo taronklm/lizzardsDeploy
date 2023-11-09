@@ -3,9 +3,11 @@ package com.example.demo.song;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -20,7 +22,7 @@ public class SongController {
     
     private final SongService songService;
 
-    private UserService userService;
+    private final UserService userService;
     
     @Autowired
     public SongController(SongService songService, UserService userService){
@@ -39,5 +41,20 @@ public class SongController {
         
         song.setUser(user);
         songService.createNewSong(song);
+    }
+
+    @DeleteMapping(path = "delete/{songId}")
+    public void deleteSong(@PathVariable("songId") Long songId){
+        songService.deleteSong(songId);
+    }
+
+    @PutMapping(path = "update/{songId}")
+    public void updateSong(
+        @PathVariable("songId") Long songId,
+        @RequestParam(required = false) String title,
+        @RequestParam(required = false) String actor,
+        @RequestParam(required = false) Integer songDuration,
+        @RequestParam(required = false) String genre){
+            songService.updateSong(songId, title, actor, songDuration, genre);
     }
 }
