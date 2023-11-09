@@ -1,9 +1,14 @@
 package com.example.demo.user;
 import java.time.LocalDate;
+import java.util.List;
+
+import com.example.demo.song.Song;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
 import jakarta.persistence.Transient;
@@ -19,6 +24,9 @@ public class User {
     private String name;
     private String email;
     private LocalDate dob;
+
+    @OneToMany(mappedBy = "user") //relation many songs, one user
+    private List<Song> songs;
 
     @Transient
     private Integer age;
@@ -62,6 +70,4 @@ public class User {
     public void setId(Long id) {
         this.id = id;
     }
-
-
 }

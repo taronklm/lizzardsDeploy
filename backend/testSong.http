@@ -1,0 +1,21 @@
+### SET
+POST http://localhost:8080/api/v1/student HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "John",
+    "email": "john@bht.de",
+    "dob": "2000-01-01"
+}
+
+### SET
+POST http://localhost:8080/api/v1/song/create/1 HTTP/1.1
+Content-Type: application/json
+
+{
+    "title": "Joe",
+    "actor": "Mama",
+    "songDuration": 312,
+    "likes": 0,
+    "genre": "test"
+}
