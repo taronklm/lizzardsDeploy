@@ -76,6 +76,7 @@ deploy:jdk8:
       fi
     - 'cd backend'
     - 'mvn -v'
+    - 'mvn test'
     - 'mvn clean install'
   only:
     variables:
