@@ -98,13 +98,13 @@ public class Song {
         this.likes = likes;
     }
 
-    // public List<Comment> getComments() {
-    //     return comments;
-    // }
+    public List<Comment> getComments() {
+        return comments;
+    }
 
-    // public void setComments(List<Comment> comments) {
-    //     this.comments = comments;
-    // }
+    public void setComments(List<Comment> comments) {
+        this.comments = comments;
+    }
 
     public User getUser() {
         return user;
