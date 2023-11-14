@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.songTest;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
@@ -23,13 +23,14 @@ public class SongTest {
 
     @BeforeEach
     public void setUp(){
-        song = new Song("Sandstorm", "Darude", 360, 10, "Trance");
+        song = new Song(1L,"Sandstorm", "Darude", 360, 10, "Trance");
         user = new User("john", "john@doe.com", LocalDate.now());
     }
 
     @Test
     public void testCorrectValues() {
         assertNotNull(song);
+        assertEquals(Long.valueOf(1), song.getId());
         assertEquals("Sandstorm", song.getTitle());
         assertEquals("Darude", song.getActor());
         assertEquals(Integer.valueOf(360), song.getSongDuration());
@@ -39,6 +40,9 @@ public class SongTest {
 
     @Test
     public void testGetterAndSetter(){
+        song.setId(2L);
+        assertEquals(2L, song.getId());
+
         song.setTitle("Money Trees");
         assertEquals("Money Trees", song.getTitle());
 
@@ -81,5 +85,17 @@ public class SongTest {
 
         assertNotNull(song.getUser());
         assertEquals("john", song.getUser().getName());
+    }
+
+    @Test
+    public void testToString(){
+        assertEquals(
+            "Song [id=" + song.getId() + ", title=" + song.getTitle() 
+                + ", actor="  + song.getActor() + ", songDuration=" + song.getSongDuration() 
+                + ", likes=" + song.getLikes() 
+                + ", user=" + song.getUser()
+                + ", genre=" + song.getGenre() + "]", 
+            song.toString()
+        );
     }
 }
