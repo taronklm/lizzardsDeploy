@@ -11,12 +11,17 @@ import java.util.Optional;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.ActiveProfiles;
 
 import com.example.demo.song.Song;
 import com.example.demo.song.SongRepository;
 import com.example.demo.user.User;
 
+import io.zonky.test.db.AutoConfigureEmbeddedDatabase;
+
 @SpringBootTest
+@ActiveProfiles("test")
+@AutoConfigureEmbeddedDatabase
 public class SongRepositoryTest {
 
     @Autowired
