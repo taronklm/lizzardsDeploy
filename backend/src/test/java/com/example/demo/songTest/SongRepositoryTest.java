@@ -9,9 +9,11 @@ import java.util.List;
 import java.util.Optional;
 
 import org.junit.jupiter.api.Test;
+import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.ActiveProfiles;
+import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+
+import org.springframework.test.context.junit4.SpringRunner;
 
 import com.example.demo.song.Song;
 import com.example.demo.song.SongRepository;
@@ -19,8 +21,8 @@ import com.example.demo.user.User;
 
 import io.zonky.test.db.AutoConfigureEmbeddedDatabase;
 
-@SpringBootTest
-@ActiveProfiles("test")
+@RunWith(SpringRunner.class)
+@DataJpaTest
 @AutoConfigureEmbeddedDatabase
 public class SongRepositoryTest {
 
