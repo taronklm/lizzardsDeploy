@@ -1,5 +1,21 @@
 image: maven:3-openjdk-17
 
+cache:
+  paths:
+    - .m2/repository
+
+.verify:
+  stage: test
+  script:
+    - 'mvn $MAVEN_CLI_OPTS verify'
+  except:
+    variables:
+      - $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+
+verify:jdk17:
+  extends:
+    - .verify
+
 stages:
   - build
   - test
