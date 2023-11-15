@@ -9,13 +9,20 @@ import java.util.List;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.junit.runner.RunWith;
+import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
 
 import com.example.demo.comment.Comment;
 import com.example.demo.song.Song;
 import com.example.demo.user.User;
 
+import io.zonky.test.db.AutoConfigureEmbeddedDatabase;
+
+@RunWith(SpringRunner.class)
+@DataJpaTest
+@AutoConfigureEmbeddedDatabase
 @SpringBootTest
 public class SongTest {
     
