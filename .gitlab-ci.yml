@@ -12,7 +12,7 @@ variables:
     --no-transfer-progress
     -DinstallAtEnd=true
     -DdeployAtEnd=true
-  POSTGRES_DB: lizzard
+  POSTGRES_DB: student
   POSTGRES_USER: postgres
   POSTGRES_PASSWORD: pt12345
 
