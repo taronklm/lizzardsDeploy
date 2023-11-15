@@ -43,7 +43,7 @@ stages:
 build:
   stage: build
   script:
-    - "sudo ss -tulwn | grep 5432"
+    - "ss -tulwn | grep 5432"
     - "cd backend"
     - "mvn clean package"
     - "cd .."
