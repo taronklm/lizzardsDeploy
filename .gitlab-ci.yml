@@ -4,7 +4,6 @@ stages:
   - deploy
 
 variables:
-  MAVEN_CLI_OPTS: "--batch-mode"
   POSTGRES_DB: lizzard
   POSTGRES_USER: postgres
   POSTGRES_PASSWORD: pt12345
