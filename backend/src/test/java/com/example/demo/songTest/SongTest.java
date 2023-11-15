@@ -21,7 +21,7 @@ import com.example.demo.user.User;
 import io.zonky.test.db.AutoConfigureEmbeddedDatabase;
 
 @RunWith(SpringRunner.class)
-@DataJpaTest
+// @DataJpaTest
 @AutoConfigureEmbeddedDatabase
 @SpringBootTest
 public class SongTest {
