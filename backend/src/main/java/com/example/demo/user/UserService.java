@@ -8,7 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import jakarta.transaction.Transactional;
 
-
 @Service
 public class UserService {
 
@@ -19,11 +18,17 @@ public class UserService {
         this.userRepository = userRepository;
     }
 
+    public User getUser(Long userId) {
+        User user = userRepository.findById(userId)
+                .orElseThrow(() -> new IllegalStateException("user with id " + userId + " does not exists"));
+        return user;
+    }
+
     public List<User> getUsers() {
         return userRepository.findAll();
     }
 
-    public User getUserById(Long userId){
+    public User getUserById(Long userId) {
         User user = userRepository.findById(userId)
                 .orElseThrow(() -> new IllegalStateException("user with id " + userId + " does not exists"));
         return user;

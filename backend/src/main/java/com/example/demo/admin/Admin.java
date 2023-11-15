@@ -1,4 +1,5 @@
-package com.example.demo.student;
+package com.example.demo.admin;
+
 import java.time.LocalDate;
 import java.time.Period;
 
@@ -11,33 +12,42 @@ import jakarta.persistence.Table;
 import jakarta.persistence.Transient;
 
 @Entity
-@Table(name = "\"student\"")
-public class Student {
+@Table(name = "\"admin\"")
+public class Admin {
 
     @Id
-    @SequenceGenerator(name = "student_sequence", sequenceName = "student_sequence", allocationSize = 1)
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "student_sequence")
+    @SequenceGenerator(name = "admin_sequence", sequenceName = "admin_sequence", allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "admin_sequence")
     private Long id;
     private String name;
     private String email;
+    private String password;
     private LocalDate dob;
 
     @Transient
     private Integer age;
 
-    public Student() {
+    public Admin() {
     }
 
-    public Student(String name, String email, LocalDate dob) {
+    public Admin(String name, String email, String password) {
         this.name = name;
         this.email = email;
+        this.password = password;
+    }
+
+    public Admin(String name, String email, String password, LocalDate dob) {
+        this.name = name;
+        this.email = email;
+        this.password = password;
         this.dob = dob;
     }
 
-    public Student(Long id, String name, String email, LocalDate dob) {
+    public Admin(Long id, String name, String email, String password, LocalDate dob) {
         this.id = id;
         this.name = name;
         this.email = email;
+        this.password = password;
         this.dob = dob;
     }
 
@@ -79,6 +89,14 @@ public class Student {
 
     public void setAge(Integer age) {
         this.age = age;
+    }
+
+    public String getPassword() {
+        return this.password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
 }

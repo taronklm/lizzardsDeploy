@@ -1,4 +1,4 @@
-package com.example.demo.student;
+package com.example.demo.admin;
 
 import java.time.LocalDate;
 import java.time.Month;
@@ -9,18 +9,20 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public class StudentConfig {
+public class AdminConfig {
 
     @Bean
-    CommandLineRunner StudentCommandLineRunner(StudentRepository repository) {
+    CommandLineRunner AdminCommandLineRunner(AdminRepository repository) {
         return args -> {
-            Student mariam = new Student(
+            Admin mariam = new Admin(
                     "Mariam",
                     "mariam@bht.de",
+                    "pw123",
                     LocalDate.of(2000, Month.JANUARY, 5));
-            Student alex = new Student(
+            Admin alex = new Admin(
                     "Alex",
                     "alex@bht.de",
+                    "pw123",
                     LocalDate.of(1999, Month.FEBRUARY, 13));
             repository.saveAll(
                     List.of(mariam, alex));
