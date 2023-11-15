@@ -1,0 +1,1 @@
+INSERT INTO song (title, actor, songDuration, likes) VALUES('Sandstorm', 'Darude', 360, 10, 'Trance')

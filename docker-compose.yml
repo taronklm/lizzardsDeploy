@@ -1,0 +1,11 @@
+version: '3.1'
+
+services:
+  postgres:
+    image: postgres:latest
+    environment:
+      POSTGRES_DB: student
+      POSTGRES_USER: postgres 
+      POSTGRES_PASSWORD: pt12345
+    ports:
+      - "5432:5432"
