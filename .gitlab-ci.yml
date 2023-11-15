@@ -53,8 +53,3 @@ test:
     - "cd backend"
     - "mvn test"
     - "cd .."
-
-deploy:
-  stage: deploy
-  script:
-    - docker-compose up -d
