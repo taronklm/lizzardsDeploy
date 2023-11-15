@@ -44,7 +44,7 @@ build:
   stage: build
   script:
     - "cd backend"
-    - "mvn clean install"
+    - "mvn clean package"
     - "cd .."
 
 test:
