@@ -76,8 +76,9 @@ deploy:jdk8:
       fi
     - 'cd backend'
     - 'mvn -v'
-    - 'mvn test'
     - 'mvn clean install'
+    - 'mvn test'
+
   only:
     variables:
       - $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
