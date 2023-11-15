@@ -8,19 +8,19 @@ variables:
   POSTGRES_DB: lizzard
   POSTGRES_USER: postgres
   POSTGRES_PASSWORD: pt12345
-  
+
 build:
   stage: build
   script:
     - "cd backend"
-    - "mvnw clean package"
+    - "mvn clean package"
     - "cd .."
 
 test:
   stage: test
   script:
     - "cd backend"
-    - "mvnw test"
+    - "mvn test"
     - "cd .."
 
 deploy:
